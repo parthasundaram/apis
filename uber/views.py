@@ -78,7 +78,7 @@ def submit(request):
 	look_up_profile(request)
 
 	# we have the access token - time to show some stuff
-	return HttpResponseRedirect("../history")
+	return HttpResponseRedirect("history")
 	
 def history(request):
 		# look up history but only look at last 50, looks like they paginate
@@ -123,7 +123,7 @@ def history(request):
 
 	total_distance_travelled = round (total_distance_travelled,2)
 
-	return render(request, 'tutorial/history.html', {'ride_history': rides, 'total_distance_travelled': total_distance_travelled, 'longest_ride': longest_ride, 'shortest_ride': shortest_ride, 'date_of_first_ride':date_of_first_ride})
+	return render(request, 'uber/history.html', {'ride_history': rides, 'total_distance_travelled': total_distance_travelled, 'longest_ride': longest_ride, 'shortest_ride': shortest_ride, 'date_of_first_ride':date_of_first_ride})
 
 
 def look_up_profile(request):
