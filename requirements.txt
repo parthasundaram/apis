@@ -1,4 +1,5 @@
 Django==1.7.1
+South
 PyJWT==0.4.0
 Scrapy==0.24.4
 Twisted==13.2.0
